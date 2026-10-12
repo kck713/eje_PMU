@@ -6,8 +6,8 @@
 
 ## 저장소 · 브랜치
 
-- 저장소: `kck713/Daniel-Kim`
-- 작업 브랜치: `claude/confident-lovelace-h25338` → PR [kck713/Daniel-Kim#1](https://github.com/kck713/Daniel-Kim/pull/1) (base: `main`, 아직 미병합)
+- 저장소: `kck713/eje_PMU` (2026-10 `Daniel-Kim`에서 이름 변경)
+- 작업 브랜치: `claude/confident-lovelace-h25338` → PR [kck713/eje_PMU#1](https://github.com/kck713/eje_PMU/pull/1) (base: `main`, 아직 미병합)
 - `main`은 빈 초기 커밋만 있음. GitHub 기본 브랜치가 아직 작업 브랜치로 되어 있을 수 있음(설정 → Default branch를 `main`으로 바꾸도록 안내함)
 - 수정할 때마다 커밋 → 같은 브랜치에 푸시 → PR에 자동 반영되는 흐름으로 진행해 왔음
 

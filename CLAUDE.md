@@ -60,7 +60,7 @@ tools/build-preview.py  Artifact 미리보기용 단일 HTML 생성 스크립트
 - 예약 폼 실제 접수 연동 (`main.js` TODO)
 - 모델 사진 사용 권한 확인(사용자에게 안내함)
 - SEO/AEO/GEO(메타 태그 정리, LocalBusiness·FAQPage JSON-LD, sitemap/robots, 서치콘솔 등록): 사용자가 "나중에" 하기로 함. 실제 정보가 다 채워진 뒤 진행 권장
-- 호스팅(GitHub Pages/Netlify 등) 미정
+- 호스팅: GitHub Pages로 공개하기로 함(2026-10). 사용자가 Settings → Pages에서 Source를 `Deploy from a branch` / `claude/confident-lovelace-h25338` / `/(root)`로 지정. 주소: https://kck713.github.io/eje_PMU/ . `.nojekyll`로 Jekyll 처리 끔. 이 클라우드 환경에서는 github.io 접속이 막혀 직접 확인 불가
 
 ## 사용자 취향 · 지켜온 결정
 

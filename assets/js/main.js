@@ -71,14 +71,6 @@
     });
   });
 
-  // Before / After sliders
-  document.querySelectorAll("[data-ba]").forEach(function (wrap) {
-    var range = wrap.querySelector("input");
-    function update() { wrap.style.setProperty("--pos", range.value + "%"); }
-    range.addEventListener("input", update);
-    update();
-  });
-
   // Count-up numbers
   function countUp(el) {
     var target = parseInt(el.dataset.count, 10);

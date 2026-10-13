@@ -47,7 +47,7 @@ tools/build-preview.py  Artifact 미리보기용 단일 HTML 생성 스크립트
 - 카카오톡: https://pf.kakao.com/_xlqxcxjX (사용자가 `/chat` 없이 이 주소로 요청)
 - 인스타그램: https://www.instagram.com/e.je_pmu/
 - 네이버 플레이스: https://map.naver.com/p/entry/place/2083666376
-- 가격(모두 리터치 1회 포함): Hairstroke 400,000 / Shadow 250,000 / Combo 300,000 / Lip Blush 350,000. 속눈썹은 "상담 후 안내"
+- 가격(모두 리터치 1회 포함): Hairstroke 400,000 / Shadow 250,000 / Combo 300,000 / Lip Blush 350,000. 속눈썹펌(Lash Lift) 40,000(리터치 없음)
 - 리터치: 시술 후 4~8주 이내, 방문일 2주 전까지 예약
 
 ## 아직 임시값 / 남은 일
@@ -55,7 +55,7 @@ tools/build-preview.py  Artifact 미리보기용 단일 HTML 생성 스크립트
 - 원장 자격·수료 내용 (`index.html`의 `[자격·수료 입력]`). 경력은 사용자 요청으로 뺌
 - 영업시간: 평일 10–20, 토 10–17, 일·공휴일 휴무 — 사용자가 "그대로 유지"라고 함
 - 사업자등록번호: 예비창업자라 아직 없음 → 푸터에서 뺌. 등록 후 다시 넣기
-- EYE LASH 가격, 세부 메뉴(래쉬 리프트/틴팅/영양 케어는 Claude가 일반적인 구성으로 채운 것 — 확인 필요)
+- EYE LASH 세부 메뉴(래쉬 리프트/틴팅/영양 케어는 Claude가 일반적인 구성으로 채운 것 — 확인 필요)
 - 실제 후기 (전후 사진은 반영함, 캡션 세부 시술명 확인 필요)
 - 예약 폼 실제 접수 연동 (`main.js` TODO)
 - 모델 사진 사용 권한 확인(사용자에게 안내함)

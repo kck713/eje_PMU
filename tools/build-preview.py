@@ -23,7 +23,7 @@ body = re.search(r"<body>(.*?)</body>", html, re.S).group(1)
 head = re.sub(r"\s*<meta[^>]*>", "", head)
 head = re.sub(r"\s*<link[^>]*(jsdelivr|style\.css)[^>]*>", "", head)
 head = re.sub(r"<title>.*?</title>", "<title>e.je PMU</title>", head)
-body = body.replace('<script src="assets/js/main.js"></script>', "<script>\n" + js + "\n</script>")
+body = re.sub(r'<script src="assets/js/main\.js[^"]*"></script>', lambda m: "<script>\n" + js + "\n</script>", body)
 
 out.write_text(
     head.strip()

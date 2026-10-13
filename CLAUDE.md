@@ -79,6 +79,7 @@ tools/build-preview.py  Artifact 미리보기용 단일 HTML 생성 스크립트
 - `<img>`에 width/height 속성을 넣었으면 CSS에서 비율을 고정할 때 반드시 `height:auto`도 함께(안 그러면 height 속성값이 그대로 적용돼 이미지가 길게 늘어남)
 - Playwright는 `executablePath: '/opt/pw-browsers/chromium'`으로 실행. 스크린샷 경로를 상대경로로 주면 저장소에 png가 생기니 스크래치 폴더에 저장할 것
 - Pretendard 폰트는 jsdelivr에서 로드(실사이트용). Artifact 미리보기에서는 막혀서 Noto Sans KR로 대체됨
+- CSS/JS 링크에 `?v=날짜` 붙여 둠(GitHub Pages 브라우저 캐시 때문에 새 HTML+옛 CSS로 깨져 보인 적 있음). style.css/main.js 고치면 `?v=` 값도 바꿀 것
 - 이 클라우드 환경에서 mikclinic.com, pf.kakao.com, Google 지도 iframe 등 일부 외부 사이트는 접속이 막혀 있었음
 
 ## 미리보기(Artifact)

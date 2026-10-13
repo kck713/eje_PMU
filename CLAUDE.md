@@ -16,7 +16,7 @@
 ```
 index.html              페이지 전체 마크업 (섹션 순서는 아래 참고)
 assets/css/style.css    스타일. 맨 위 :root 토큰 + 섹션별 블록 + 반응형(1520/1180/960/600px)
-assets/js/main.js       헤더 스크롤, 모바일 메뉴, 시술 탭, 카운트업, 스크롤 등장, 예약 폼 검증
+assets/js/main.js       헤더 스크롤, 모바일 메뉴, 시술 탭, 전후 비교 슬라이더(PC는 마우스 따라 움직임), 카운트업, 스크롤 등장, 예약 폼 검증
 assets/img/*.webp       모든 이미지 (사용자가 보내준 원본을 잘라/압축해 webp로 저장)
 tools/build-preview.py  Artifact 미리보기용 단일 HTML 생성 스크립트
 ```
@@ -29,7 +29,7 @@ tools/build-preview.py  Artifact 미리보기용 단일 HTML 생성 스크립트
 4. 원장 소개 `#director`: `director.webp`(밝은 크림 배경, 그림자). 경력은 빼기로 함, 자격 1줄만 **빈칸**
 5. 시술 안내 `#services`: 탭 3개 BROWS 눈썹 / LIP BLUSH 입술 / EYE LASH 속눈썹. 이미지 3:4 고정
 6. 시술 과정(4단계)
-7. 전후 비교 `#gallery`: 실제 눈썹 시술 사진 3쌍(`ba-1~3-before/after.webp`), 위 BEFORE / 아래 AFTER로 나란히 표시. 사용자가 보낸 5장 중 위·아래 구성인 3장을 골라 테두리만 잘라냄. 전후 사진 구도가 달라 드래그 슬라이더는 없앰. 캡션은 'BROWS · 눈썹'(세부 시술명은 사용자 확인 필요)
+7. 전후 비교 `#gallery`: 실제 눈썹 시술 사진 3쌍(`ba-1~3-before/after.webp`, 8:7) 드래그 슬라이더. PC에서는 클릭 없이 마우스를 좌우로 움직이면 따라감. 사용자가 보낸 5장 중 위·아래 구성 3장을 골라 테두리를 잘라내고, 슬라이더에서 겹쳐 보이도록 AFTER 사진을 BEFORE에 맞춰 회전·크기·위치만 정렬(OpenCV SIFT)함. 캡션은 'BROWS · 눈썹'(세부 시술명은 사용자 확인 필요)
 8. 후기 `#reviews` (**예시 문구**)
 9. 가격 `#price`: 메뉴판 형식 (아래 가격 참고)
 10. FAQ `#faq`

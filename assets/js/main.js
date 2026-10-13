@@ -71,6 +71,22 @@
     });
   });
 
+  // Before / After sliders
+  document.querySelectorAll("[data-ba]").forEach(function (wrap) {
+    var range = wrap.querySelector("input");
+    function update() { wrap.style.setProperty("--pos", range.value + "%"); }
+    range.addEventListener("input", update);
+    // 마우스가 있는 기기: 클릭 없이 마우스를 좌우로 움직이기만 해도 따라감
+    if (window.matchMedia("(hover: hover)").matches) {
+      wrap.addEventListener("mousemove", function (e) {
+        var r = wrap.getBoundingClientRect();
+        range.value = Math.max(0, Math.min(100, ((e.clientX - r.left) / r.width) * 100));
+        update();
+      });
+    }
+    update();
+  });
+
   // Count-up numbers
   function countUp(el) {
     var target = parseInt(el.dataset.count, 10);

@@ -264,26 +264,26 @@ i { font-style: normal; }
 .process__list p { color: var(--ink-soft); font-size: .92rem; margin: 0; }
 
 /* ---------- Before / After ---------- */
-.ba-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1000px; margin-inline: auto; }
+.ba-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .ba { margin: 0; }
 .ba__wrap { position: relative; aspect-ratio: 8 / 7; max-width: 100%; overflow: hidden; --pos: 50%; user-select: none; }
 .ba__after, .ba__before { position: absolute; inset: 0; }
 .ba__before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
 .ba__after img, .ba__before img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
 .ba__before span, .ba__after span {
-  position: absolute; top: 12px; padding: 4px 10px; font-size: .72rem; letter-spacing: .16em;
+  position: absolute; top: 8px; padding: 3px 7px; font-size: .6rem; letter-spacing: .14em;
   background: rgba(34,29,26,.72); color: var(--white);
 }
 .ba__after span { background: var(--sand); color: var(--espresso); }
-.ba__before span { left: 16px; }
-.ba__after span { right: 16px; }
+.ba__before span { left: 8px; }
+.ba__after span { right: 8px; }
 .ba__handle {
   position: absolute; top: 0; bottom: 0; left: var(--pos);
   width: 2px; background: var(--white); transform: translateX(-50%); pointer-events: none;
 }
 .ba__handle::after {
   content: "‹ ›"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  width: 44px; height: 44px; border-radius: 50%; background: var(--sand); color: var(--espresso);
+  width: 32px; height: 32px; border-radius: 50%; background: var(--sand); color: var(--espresso);
   display: grid; place-items: center; font-size: 1rem; letter-spacing: .1em;
 }
 .ba__wrap input {
@@ -478,7 +478,7 @@ i { font-style: normal; }
   .location__visuals { grid-template-columns: 1fr; }
   .location__building { aspect-ratio: 4 / 3; }
   .location__building img { object-position: 50% 60%; }
-  .ba-grid { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
+  .ba-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .menu { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; }
 }
 

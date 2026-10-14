@@ -264,7 +264,7 @@ i { font-style: normal; }
 .process__list p { color: var(--ink-soft); font-size: .92rem; margin: 0; }
 
 /* ---------- Before / After ---------- */
-.ba-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.ba-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1000px; margin-inline: auto; }
 .ba { margin: 0; }
 .ba__wrap { position: relative; aspect-ratio: 8 / 7; max-width: 100%; overflow: hidden; --pos: 50%; user-select: none; }
 .ba__after, .ba__before { position: absolute; inset: 0; }

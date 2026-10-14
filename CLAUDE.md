@@ -29,7 +29,7 @@ tools/build-preview.py  Artifact 미리보기용 단일 HTML 생성 스크립트
 4. 원장 소개 `#director`: `director.webp`(밝은 크림 배경, 그림자). 경력은 빼기로 함, 소개 4줄(자연눈썹·립블러쉬 전문 / 생명공학 박사 / 피부미용 국가자격증 / 1:1 맞춤 디자인·삼성중앙역)
 5. 시술 안내 `#services`: 탭 3개 BROWS 눈썹 / LIP BLUSH 입술 / EYE LASH 속눈썹. 이미지 3:4 고정
 6. 시술 과정(4단계)
-7. 전후 비교 `#gallery`: 실제 시술 사진 4쌍(눈썹 `ba-shadow`, `ba-2`, `ba-3` + 입술 `ba-lip2`, -before/after.webp, 8:7) 드래그 슬라이더, PC 한 줄 4칸(작게), 960px 이하 2×2. 입술은 위·아래 합성 사진을 세워서 돌리고 입꼬리·윗입술 가운데·아랫입술 아래 기준으로 수동 정렬(얼굴 각도가 달라 코는 안 맞으니 입술 위주로 자름). 첫 번째는 사용자가 보낸 쉐도우 기법 정면 사진 한 쌍(남성 사진을 대체). PC에서는 클릭 없이 마우스를 좌우로 움직이면 따라감. 사용자가 보낸 5장 중 위·아래 구성 3장을 골라 테두리를 잘라내고, 슬라이더에서 겹쳐 보이도록 AFTER 사진을 BEFORE에 맞춰 회전·크기·위치만 정렬(OpenCV SIFT)함. 순서: Hairstroke(`ba-3`) → Shadow(`ba-shadow`) → Combo(`ba-2`) → Lip Blush(`ba-lip2`), 사진 아래 시술법 캡션 '영문 한글'(예: Hairstroke 헤어스트로크, Lip Blush 입술), 본문과 같은 고딕 폰트(사용자가 세리프 쓰지 말고 통일하라고 함)
+7. 전후 비교 `#gallery`: 실제 시술 사진 4쌍(눈썹 `ba-shadow`, `ba-2`, `ba-3` + 입술 `ba-lip3`, -before/after.webp, 8:7) 드래그 슬라이더, PC 한 줄 4칸(작게), 960px 이하 2×2. 입술은 위·아래 합성 사진을 세워서 돌리고 AFTER는 좌우반전(사용자 제안, 원본 합성 사진에서 반전돼 있었음) 후 콧구멍·입꼬리·입술 기준 수동 정렬. 첫 번째는 사용자가 보낸 쉐도우 기법 정면 사진 한 쌍(남성 사진을 대체). PC에서는 클릭 없이 마우스를 좌우로 움직이면 따라감. 사용자가 보낸 5장 중 위·아래 구성 3장을 골라 테두리를 잘라내고, 슬라이더에서 겹쳐 보이도록 AFTER 사진을 BEFORE에 맞춰 회전·크기·위치만 정렬(OpenCV SIFT)함. 순서: Hairstroke(`ba-3`) → Shadow(`ba-shadow`) → Combo(`ba-2`) → Lip Blush(`ba-lip3`), 사진 아래 시술법 캡션 '영문 한글'(예: Hairstroke 헤어스트로크, Lip Blush 입술), 본문과 같은 고딕 폰트(사용자가 세리프 쓰지 말고 통일하라고 함)
 8. 후기 `#reviews`: 네이버 블로그 실제 후기 3개를 요약한 카드(누르면 원문 링크). HAIRSTROKE 동동이(hungry_dongdong), SHADOW 지구를 굴러굴러(zxcvbnm2760, 내돈내산), LIP BLUSH 희스톨희(heestorhee). 요약은 본문 내용만 사용, '잔흔' 표현은 뺌. 불꽃여자(glglwlsgml) 글은 지인 대신 후기라 제외. 구글 리뷰가 쌓이면 추가 예정
 9. 가격 `#price`: 메뉴판 형식 (아래 가격 참고)
 10. FAQ `#faq`

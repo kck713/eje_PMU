@@ -290,7 +290,8 @@ i { font-style: normal; }
   position: absolute; inset: 0; width: 100%; height: 100%; margin: 0;
   opacity: 0; cursor: ew-resize; z-index: 2;
 }
-.ba figcaption { margin-top: 12px; text-align: center; font-family: var(--serif-en); font-size: 1.15rem; letter-spacing: .06em; color: var(--sand); }
+.ba figcaption { margin-top: 12px; text-align: center; font-size: .92rem; color: rgba(255,255,255,.75); }
+.ba figcaption b { font-weight: 700; color: var(--sand); margin-right: 4px; }
 .gallery .notice { text-align: center; }
 
 /* ---------- Reviews ---------- */

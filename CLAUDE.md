@@ -14,12 +14,22 @@
 ## 파일 구조
 
 ```
-index.html              페이지 전체 마크업 (섹션 순서는 아래 참고)
+index.html              페이지 전체 마크업 (섹션 순서는 아래 참고) — 한국어(기본)
+en/index.html           영어 페이지 (index.html과 같은 구조, 경로는 ../assets/)
+ja/index.html           일본어 페이지 (같은 구조, Noto Sans/Serif JP 추가 로드)
 assets/css/style.css    스타일. 맨 위 :root 토큰 + 섹션별 블록 + 반응형(1520/1180/960/600px)
 assets/js/main.js       헤더 스크롤, 모바일 메뉴, 시술 탭, 전후 비교 슬라이더(PC는 마우스 따라 움직임), 카운트업, 스크롤 등장, 예약 폼 검증
 assets/img/*.webp       모든 이미지 (사용자가 보내준 원본을 잘라/압축해 webp로 저장)
 tools/build-preview.py  Artifact 미리보기용 단일 HTML 생성 스크립트
 ```
+
+## 다국어 (KO / EN / JA)
+
+- 헤더 오른쪽 언어 드롭다운(`.lang`, 모바일에서도 햄버거 옆에 보임)으로 세 페이지를 오감. hreflang alternate 링크 있음
+- **한국어 index.html을 고치면 en/ja도 같은 부분을 같이 고칠 것**(구조가 같으니 같은 위치를 찾아 번역해서 반영)
+- JS 문구(메뉴 라벨, 예약 폼 메시지)는 `main.js` 맨 위 `T` 사전에서 `<html lang>`으로 고름. en/ja는 국제 전화번호 형식 허용
+- 일본어는 `word-break: keep-all`을 풀어야 줄바꿈됨(`html[lang="ja"] body`)
+- 영문/일문 표기 중 확인 필요: 원장 이름 `Lee Je` / `イ・ジェ`, 대표 `Son Eun-jeong` / `ソン・ウンジョン`, 자격 영문(Korean National License in Skin Care), 후기 요약 번역. `location-guide.webp` 약도 이미지는 한국어 그대로
 
 ## 섹션 순서 (index.html)
 

@@ -1,6 +1,34 @@
 (function () {
   "use strict";
 
+  var T = {
+    ko: { menuOpen: "메뉴 열기", menuClose: "메뉴 닫기", phone: "연락처를 올바르게 입력해 주세요.", agree: "개인정보 수집 및 이용에 동의해 주세요.", required: "필수 항목을 모두 입력해 주세요.", done: "상담 신청이 접수되었습니다. 곧 연락드리겠습니다." },
+    en: { menuOpen: "Open menu", menuClose: "Close menu", phone: "Please enter a valid phone number.", agree: "Please agree to the collection and use of personal information.", required: "Please fill in all required fields.", done: "Thank you. Your request has been received and we will contact you soon." },
+    ja: { menuOpen: "メニューを開く", menuClose: "メニューを閉じる", phone: "電話番号を正しく入力してください。", agree: "個人情報の収集・利用に同意してください。", required: "必須項目をすべて入力してください。", done: "ご相談のお申し込みを受け付けました。追ってご連絡いたします。" }
+  };
+  var lang = document.documentElement.lang;
+  var t = T[lang] || T.ko;
+
+  // Language switcher
+  var langBox = document.getElementById("lang");
+  if (langBox) {
+    var langBtn = langBox.querySelector(".lang__btn");
+    var setLang = function (open) {
+      langBox.classList.toggle("is-open", open);
+      langBtn.setAttribute("aria-expanded", String(open));
+    };
+    langBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      setLang(!langBox.classList.contains("is-open"));
+    });
+    document.addEventListener("click", function (e) {
+      if (!langBox.contains(e.target)) setLang(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setLang(false);
+    });
+  }
+
   // Header background on scroll + TOP button
   var header = document.getElementById("header");
   var topBtn = document.querySelector(".to-top");
@@ -19,7 +47,7 @@
     nav.classList.toggle("is-open", open);
     header.classList.toggle("menu-open", open);
     menuBtn.setAttribute("aria-expanded", String(open));
-    menuBtn.setAttribute("aria-label", open ? "메뉴 닫기" : "메뉴 열기");
+    menuBtn.setAttribute("aria-label", open ? t.menuClose : t.menuOpen);
     document.body.style.overflow = open ? "hidden" : "";
   }
   menuBtn.addEventListener("click", function () {
@@ -123,7 +151,7 @@
   // Reservation form (front-end validation only)
   var form = document.getElementById("reserveForm");
   var msg = document.getElementById("formMsg");
-  var phoneRe = /^0\d{1,2}-?\d{3,4}-?\d{4}$/;
+  var phoneRe = lang === "ko" ? /^0\d{1,2}-?\d{3,4}-?\d{4}$/ : /^\+?[\d\s().-]{7,20}$/;
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var invalid = [];
@@ -137,16 +165,16 @@
     if (invalid.length) {
       msg.classList.add("is-error");
       msg.textContent = invalid[0].name === "phone"
-        ? "연락처를 올바르게 입력해 주세요."
+        ? t.phone
         : invalid[0].name === "agree"
-          ? "개인정보 수집 및 이용에 동의해 주세요."
-          : "필수 항목을 모두 입력해 주세요.";
+          ? t.agree
+          : t.required;
       invalid[0].focus();
       return;
     }
     // TODO: 실제 접수 채널(이메일, 구글폼, CRM 등)과 연동
     msg.classList.add("is-success");
-    msg.textContent = "상담 신청이 접수되었습니다. 곧 연락드리겠습니다.";
+    msg.textContent = t.done;
     form.reset();
   });
 })();

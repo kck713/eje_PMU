@@ -29,7 +29,7 @@ tools/build-preview.py  Artifact 미리보기용 단일 HTML 생성 스크립트
 - **한국어 index.html을 고치면 en/ja도 같은 부분을 같이 고칠 것**(구조가 같으니 같은 위치를 찾아 번역해서 반영)
 - JS 문구(메뉴 라벨, 예약 폼 메시지)는 `main.js` 맨 위 `T` 사전에서 `<html lang>`으로 고름. en/ja는 국제 전화번호 형식 허용
 - 일본어는 `word-break: keep-all`을 풀어야 줄바꿈됨(`html[lang="ja"] body`)
-- 영문/일문 표기 중 확인 필요: 원장 이름 `Lee Je` / `イ・ジェ`, 대표 `Son Eun-jeong` / `ソン・ウンジョン`, 자격 영문(Korean National License in Skin Care), 후기 요약 번역. `location-guide.webp` 약도 이미지는 한국어 그대로
+- 영문/일문 표기 중 확인 필요: 원장 이름 영문 `Eje`(사용자 지정) / 일문 `イジェ`(영문에 맞춤, 확인 필요), 대표 `Son Eun-jeong` / `ソン・ウンジョン`, 자격 영문(Korean National License in Skin Care), 후기 요약 번역. `location-guide.webp` 약도 이미지는 한국어 그대로
 
 ## 섹션 순서 (index.html)
 
